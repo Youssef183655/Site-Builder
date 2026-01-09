@@ -50,7 +50,12 @@ function Navigation() {
           <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="nav-about">About</a>
           <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="nav-contact">Contact</a>
         </div>
-        <Button size="sm" className="bg-primary/20 text-primary border border-primary/30 hover:bg-primary/30" data-testid="nav-cta">
+        <Button 
+          size="sm" 
+          className="bg-primary/20 text-primary border border-primary/30 hover:bg-primary/30" 
+          data-testid="nav-cta"
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        >
           <Mail className="w-4 h-4 mr-2" />
           Get in Touch
         </Button>
@@ -99,11 +104,22 @@ function Hero() {
           </motion.p>
           
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group" data-testid="hero-learn-more">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground group" 
+              data-testid="hero-learn-more"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Learn More About Me
               <ChevronDown className="ml-2 w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="border-border hover:bg-muted/50" data-testid="hero-contact">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-border hover:bg-muted/50" 
+              data-testid="hero-contact"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               <ExternalLink className="mr-2 w-4 h-4" />
               Get In Touch
             </Button>

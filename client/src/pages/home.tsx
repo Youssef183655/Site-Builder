@@ -50,15 +50,14 @@ function Navigation() {
           <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="nav-about">About</a>
           <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="nav-contact">Contact</a>
         </div>
-        <Button 
-          size="sm" 
-          className="bg-primary/20 text-primary border border-primary/30 hover:bg-primary/30" 
+        <a 
+          href="#contact"
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium h-9 rounded-md px-4 bg-primary/20 text-primary border border-primary/30 hover:bg-primary/30 transition-colors" 
           data-testid="nav-cta"
-          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
         >
           <Mail className="w-4 h-4 mr-2" />
           Get in Touch
-        </Button>
+        </a>
       </div>
     </motion.nav>
   );
@@ -104,25 +103,22 @@ function Hero() {
           </motion.p>
           
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground group" 
+            <a 
+              href="#about"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-11 rounded-md px-8 bg-primary hover:bg-primary/90 text-primary-foreground group" 
               data-testid="hero-learn-more"
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Learn More About Me
               <ChevronDown className="ml-2 w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-border hover:bg-muted/50" 
+            </a>
+            <a 
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-11 rounded-md px-8 border border-border hover:bg-muted/50" 
               data-testid="hero-contact"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <ExternalLink className="mr-2 w-4 h-4" />
               Get In Touch
-            </Button>
+            </a>
           </motion.div>
         </motion.div>
 

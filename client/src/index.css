@@ -225,6 +225,15 @@ input[type="search"]::-webkit-search-cancel-button {
   pointer-events: none;
 }
 
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient 3s ease infinite;
+}
+
 ::selection {
   background: hsl(var(--primary) / 0.3);
   color: hsl(var(--foreground));

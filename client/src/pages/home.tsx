@@ -47,7 +47,7 @@ function Navigation() {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <a href="#" className="text-xl sm:text-2xl font-display font-bold" data-testid="nav-logo">
-            <span className="text-primary">M</span>ohammed
+            <span className="text-primary">Y</span>oussef
           </a>
           
           {/* Desktop Nav */}
@@ -164,7 +164,7 @@ function Hero() {
             className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold mb-4 sm:mb-6 tracking-tight"
           >
             <span className="bg-gradient-to-r from-white via-white to-white/60 bg-clip-text text-transparent">
-              Mohammed
+              Youssef <span className="text-primary">yo!</span>
             </span>
           </motion.h1>
           
@@ -440,7 +440,7 @@ function Contact() {
                 </div>
                 <div className="text-left">
                   <p className="text-xs sm:text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium text-sm sm:text-base">hello@mohammed.dev</p>
+                  <p className="font-medium text-sm sm:text-base">hello@youssef.dev</p>
                 </div>
               </div>
             </div>
@@ -521,7 +521,7 @@ function Footer() {
     <footer className="border-t border-white/10 py-6 sm:py-8 px-4">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
-          © 2024 Mohammed. Built with passion ❤️
+          © 2024 Youssef. Built with passion ❤️
         </p>
         <div className="flex items-center gap-4">
           <a href="#" className="text-muted-foreground hover:text-primary transition-colors">

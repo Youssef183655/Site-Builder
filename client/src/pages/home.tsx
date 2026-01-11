@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Code2, 
@@ -403,11 +403,28 @@ function Contact() {
     subject: '',
     message: ''
   });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  setFormData({
+    name: params.get('name') || '',
+    email: params.get('email') || '',
+    subject: params.get('subject') || '',
+    message: params.get('message') || ''
+  });
+}, []);
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  console.log('Form submitted:', formData);
+  
+  // انقل هنا داخل الدالة:
+  const params = new URLSearchParams({
+    name: formData.name,
+    email: formData.email,
+    subject: formData.subject,
+    message: formData.message
+  });
+  window.history.pushState({}, '', `?${params.toString()}`);
+};
 
   return (
     <section id="contact" className="relative py-16 sm:py-24 md:py-32 overflow-hidden px-4">
